@@ -1,25 +1,18 @@
 # Final Project and Deployment
 
-## Objectives
-Build a fully functional web application.
-Apply HTML, CSS, and JavaScript concepts learned.
-Deploy the project using GitHub Pages, Netlify, or Vercel.
+This is a simple static website built using HTML, CSS, and JavaScript. It is deployed using GitHub Pages.
 
-## Instructions
-Choose one of the following project ideas:
-Blog Website: Implement a multi-page site with navigation.
-Ecommerce Website: Implement a multi-page site with navigation.
+## 🌐 Live Website
 
->[!NOTE]
-> - Include at least:
-> - A responsive design.
-> - JavaScript interactivity.
-> - A deployment link.
+Visit the live site here: [https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Musenya31/]
 
-## Tasks
 
-Create a well-structured HTML5 document.
-Use at least 5 different HTML elements.
-Ensure semantic correctness.
+### 1. Project Title 
+NATURE WEBSITE
 
-Good luck and happy coding! 🚀💻
+### 2. Description
+A website that displays beautiful scenery pictures of the world 
+
+# Clone the repo
+git clone https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Musenya31/
+
