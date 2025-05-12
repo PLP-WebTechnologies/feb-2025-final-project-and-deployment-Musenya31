@@ -1,0 +1,334 @@
+
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2a9d8f;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.nav-brand a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #264653;
+}
+
+main {
+  flex: 1;
+  max-width: 480px;
+  margin: 20px auto;
+  padding: 15px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Container for left text and right image slider */
+.content-row {
+  display: flex;
+  max-width: 480px;
+  margin: 20px auto 40px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left side: hero text */
+.hero-left {
+  flex: 1;
+  text-align: left;
+}
+
+/* Right side: slider */
+.slider-right {
+  flex: 1;
+  max-width: 240px;
+}
+
+/* Adjust slider images to fit container */
+.slider-right .slides {
+  position: relative;
+  height: 180px;
+}
+
+.slider-right .slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;
+}
+
+.slider-right .slide.active {
+  display: block;
+}
+
+/* Override generic slider-section margin on this layout */
+.slider-section {
+  margin: 0;
+  overflow: visible;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Hero Section */
+.hero-left h1 {
+  font-size: 1.75rem;
+  color: #264653;
+  margin-bottom: 10px;
+}
+
+.hero-left p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Slider Section for pages without flex layout */
+.slider-section:not(.slider-right) {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(42, 157, 143, 0.7);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover,
+.slider-btn:focus {
+  background-color: #264653;
+  outline: none;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+/* About Content */
+.about-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #264653;
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: left;
+}
+
+/* Contact Section */
+.contact-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #264653;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.875rem;
+  height: 18px;
+  margin-top: 3px;
+}
+
+.success-message {
+  color: #2a9d8f;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.btn-submit {
+  background-color: #2a9d8f;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: #264653;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #264653;
+  color: white;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .content-row {
+    flex-direction: column;
+    max-width: 90vw;
+    margin: 20px auto 30px;
+  }
+  
+  .slider-right {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .slider-right .slides {
+    height: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-brand a {
+    font-size: 1.25rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
